@@ -3,7 +3,7 @@ This repostitory is used for the major Field Programmable Gate Arrays (FPGA) at 
 For the major we'll have to make our own project.
 
 ## Idea
-Our idea is to create an FPGA who's able to play the Google Chrome's Dino jump game on it own. <br>
+Our idea is to create an FPGA who's able to play the Google Chrome's Dino jump game on it's own. <br>
 Therefore we'll need a screen for the input or a camera to register the bushes and birds. <br>
 We also need some connection to the computer/laptop on which it is playing for the FPGA to make commands to jump.
 

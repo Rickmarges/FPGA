@@ -4,6 +4,9 @@ For the major we'll have to make our own project.
 
 ## Idea
 Our idea is to create an FPGA who's able to play the Google Chrome's Dino jump game on it's own. <br>
+This game consists of a dino that only survives by jumping over bushes and dives under other dinos. <br>
+We want to keep this game going as long as possible with only the commands the FPGA gives to the dino.<br>
+<br>
 Therefore we'll need a screen for the input or a camera to register the bushes and birds. <br>
 We also need some connection to the computer/laptop on which it is playing for the FPGA to make commands to jump.
 

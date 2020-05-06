@@ -26,9 +26,9 @@ Write FPGA code | 01-05-2020 to 31-05-2020 |
 Hand in of paper | 15-06-2020 |
 
 ### Meetings
-The upcoming table containts all scheduled meetings.
+The upcoming table contains all scheduled meetings.
 
-Meeting number | Schedulde for 
+Meeting number | Scheduled for 
 :------------: | -------------
 #1 | 21-04-2020 08:30
 #2 | 24-04-2020 14:30

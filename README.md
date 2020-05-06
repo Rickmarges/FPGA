@@ -44,3 +44,7 @@ Meeting number | Scheduled for
 #12 | 12-06-2020 09:15
 #13 | 16-06-2020 09:15
 #14 | 19-06-2020 09:15
+
+The information contained in this website is for general information purposes only. <br>
+The information is provided by "GO-GO" and whilst we endeavor to keep the information up-to-date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+

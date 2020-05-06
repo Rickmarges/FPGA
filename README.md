@@ -19,6 +19,6 @@ Work items | Scheduled for | Done
 Set up Github | 16-04-2020 | **X**
 Hand in project pitch | 17-04-2020 | **X**
 First meeting | 21-04-2020 08:30 | **X**
-Plan of Action | 24-04-2020 | 
-Research proposal | 01-05-2020 |
+Plan of Action | 24-04-2020 | **X**
+Research proposal | 01-05-2020, Delayed to 06-05| **X**
 Hand in of paper | 15-06-2020 |

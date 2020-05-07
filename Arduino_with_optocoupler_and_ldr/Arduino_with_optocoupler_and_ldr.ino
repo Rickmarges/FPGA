@@ -1,5 +1,5 @@
 /*
-** Authors: Maryn Kaspers and Rick Margés 
+** Authors: Maryn Kaspers and Rick Margés
 ** This set-up will be used to automatically run the Google Chrome Dino Jump game
 ** It will use one LDR to recognize the cacti and the birds.
 ** And another LDR to check the background color because of the theme switches in the game.
@@ -54,7 +54,7 @@ void detect() {
     // This value is a threshold which will be exceded by the passing cacti
     if (analogRead(foregroundLDR) > analogRead(backgroundLDR) * 1.4
         || analogRead(foregroundLDR) * 1.4 < analogRead(backgroundLDR)) {
-      pendingJumps++;                           // If a cacti is registerd increase pending jumps
+      pendingJumps++;                           // If a cactus is registerd increase pending jumps
       previousDetectionMillis = currentMillis;  // Set the previous detection time to the current time
     }
   }

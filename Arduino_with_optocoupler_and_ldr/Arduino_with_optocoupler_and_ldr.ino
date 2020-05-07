@@ -15,20 +15,26 @@ int lightPin = 5;					        // Set the lightPin (will become keyboard) to digi
 int backgroundLDR = A0;				    // The background LDR will be connected to analog pin A0
 int foregroundLDR = A5;				    // The foreground LDR will be connected to analog pin A5
 int jumpDelay;                    // A delay set before jumping
+int pendingJumps;
+unsigned long currentMillis = 0;
+unsigned long previousJumpMillis = 0;
+unsigned long previousDetectionMillis = 0;
 
 void setup()
 {
   Serial.begin(9600);
-  Serial.setTimeout(1);				      // This sets the timeout for the serial to 1. Otherwise the parseInt function is to slow
+  Serial.setTimeout(10);				      // This sets the timeout for the serial to 1. Otherwise the parseInt function is to slow
   pinMode(lightPin, OUTPUT);		    // Set the lightPin (will become keyboard) to output
-  pinMode(13, OUTPUT);              // Visual test with build in LED
+  pinMode(LED_BUILTIN, OUTPUT);     // Visual test with build in LED
   pinMode(backgroundLDR, INPUT);	  // Make sure the LDR will be seen as input
   pinMode(foregroundLDR, INPUT);	  // Also set the other LDR as input
-  digitalWrite(13, LOW);            // Make sure the build in LED is set at low
+  digitalWrite(LED_BUILTIN,HIGH);   // Make sure the build in LED is set at low
 }
 
 void loop()
 {
+  currentMillis = millis();
+
   // Check if there is incoming serial data to determine the jump delay
   if (Serial.available() > 0) {
     int tempDelay = Serial.parseInt(); // This reads the input data and converts it to an int
@@ -37,17 +43,33 @@ void loop()
       Serial.println(jumpDelay);    // Just to check the incoming data
     }
   }
+  detect();
+  jump();
+}
 
-  // The if statement checks if the forground LDR is 1.4 times higher or lower than the background because of cacti with different themes.
-  if (analogRead(foregroundLDR) > analogRead(backgroundLDR) * 1.4 || analogRead(foregroundLDR) * 1.4 < analogRead(backgroundLDR)) {
-    delay(jumpDelay);					      // This sets the delay before jumping
-    Serial.println(jumpDelay); 		  // Just to check the incoming data
-    digitalWrite(lightPin, HIGH);	  // Set the light pin to high so the dino will jump
-    digitalWrite(13, HIGH);         // Visual test with the built in led
-    delay(250);							        // Use short delay before the pin will be set back to low
-    digitalWrite(lightPin, LOW);	  // Set the pin back to low so the dino will go down
-    digitalWrite(13, LOW);
+void detect() {
+  if (currentMillis - previousDetectionMillis >= 1000) {
+    if (analogRead(foregroundLDR) > analogRead(backgroundLDR) * 1.4 || analogRead(foregroundLDR) * 1.4 < analogRead(backgroundLDR)) {
+      pendingJumps++;
+      previousDetectionMillis = currentMillis;
+    }
   }
+}
 
-  delay(10); // This short delay makes the code run smoother
+void jump() {
+  if (pendingJumps > 0 && digitalRead(LED_BUILTIN) == 0) {
+    Serial.println(pendingJumps);
+    if (currentMillis - previousJumpMillis >= jumpDelay) {
+      digitalWrite(lightPin, HIGH);    // Set the light pin to high so the dino will jump
+      digitalWrite(LED_BUILTIN, HIGH);         // Visual test with the built in led
+      previousJumpMillis = currentMillis;
+      pendingJumps--;
+    }
+  } else {
+    if (currentMillis - previousJumpMillis >= 100) {
+      digitalWrite(lightPin, LOW);
+      digitalWrite(LED_BUILTIN, LOW);         // Visual test with the built in led
+      previousJumpMillis += 100;
+    }
+  }
 }

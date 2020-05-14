@@ -1,27 +1,29 @@
 //-----------------------------------------------------
-// This is my second Verilog Design
-// Design Name : first_counter
-// File Name : first_counter.v
-// Function : This is a 4 bit up-counter with
-// Synchronous active high reset and
-// with active high enable signal
+// This Verilog design is used in an FPGA project to 
+// play the Google Chrome's Dino Jump game
+// Design Name : Jump_Duck_Dino
+// File Name : Jump_Duck_Dino.v
+// Authors: Maryn Kaspers & Rick Margés
 //-----------------------------------------------------
 module Jump_Duck_Dino (
 	GPILDR1,
 	GPILDR2,
-//	GPILDR3,
+	GPILDR3,
 	LEDG,
 	SPACEBAR,
 	DOWNKEY,
 	CLOCK_50
 );
 
+	// Outputs
 	output wire [7:0] LEDG;
 	output wire SPACEBAR;
 	output wire DOWNKEY;
+	
+	// Inputs
 	input wire GPILDR1;
 	input wire GPILDR2;
-//	input wire GPILDR3;
+	input wire GPILDR3;
 	input wire CLOCK_50;
 
 	// reg
@@ -34,7 +36,7 @@ module Jump_Duck_Dino (
 	assign SPACEBAR = rSPACEBAR;
 	assign DOWNKEY = rDOWNKEY;
 
-	// always
+	// At every positive edge of the clock cycle
 	always @(posedge CLOCK_50) begin
 		if (GPILDR1 == 1'b1) begin
 			rSPACEBAR <= 1'b1;            	// Spacebar pressed

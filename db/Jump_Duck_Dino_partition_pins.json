@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SPACEBAR",
+					"strict" : false
+				},
+				{
+					"name" : "DOWNKEY",
+					"strict" : false
+				},
+				{
+					"name" : "GPILDR1",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "GPILDR2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

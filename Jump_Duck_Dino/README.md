@@ -21,7 +21,6 @@ Hand in project pitch | 17-04-2020 | **√**
 First meeting | 21-04-2020 08:30 | **√**
 Plan of Action | 24-04-2020 | **√**
 Research proposal | 01-05-2020, Delayed to 06-05| **√**
-Write Arduino code | 01-05-2020 to 31-05-2020 |
 Write FPGA code | 01-05-2020 to 31-05-2020 |
 Hand in of paper | 15-06-2020 |
 

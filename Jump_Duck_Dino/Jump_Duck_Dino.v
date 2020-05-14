@@ -6,13 +6,13 @@
 // Authors: Maryn Kaspers & Rick Margés
 //-----------------------------------------------------
 module Jump_Duck_Dino (
-	GPILDR1,
-	GPILDR2,
-	GPILDR3,
-	LEDG,
-	SPACEBAR,
-	DOWNKEY,
-	CLOCK_50
+	GPILDR1,		// The input pin for the background LDR
+	GPILDR2,		// The input pin for the first foreground LDR
+	GPILDR3,		// The input pin for the second foreground LDR
+	LEDG,			// Build in green LED for testing purpose
+	SPACEBAR,	// The output pin for the spacebar keystroke
+	DOWNKEY,		// The output pin for the down keystroke
+	CLOCK_50	
 );
 
 	// Outputs

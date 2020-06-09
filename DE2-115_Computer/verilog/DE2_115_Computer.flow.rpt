@@ -1,0 +1,134 @@
+Flow report for DE2_115_Computer
+Fri May 29 12:23:27 2020
+Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Fri May 29 12:23:00 2020       ;
+; Quartus Prime Version              ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
+; Revision Name                      ; DE2_115_Computer                            ;
+; Top-level Entity Name              ; DE2_115_Computer                            ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C8                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 35,265 / 114,480 ( 31 % )                   ;
+;     Total combinational functions  ; 32,016 / 114,480 ( 28 % )                   ;
+;     Dedicated logic registers      ; 20,540 / 114,480 ( 18 % )                   ;
+; Total registers                    ; 20994                                       ;
+; Total pins                         ; 376 / 529 ( 71 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 296,714 / 3,981,312 ( 7 % )                 ;
+; Embedded Multiplier 9-bit elements ; 40 / 532 ( 8 % )                            ;
+; Total PLLs                         ; 3 / 4 ( 75 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/29/2020 12:13:03 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; DE2_115_Computer    ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                           ;
++-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                     ; Value                                                             ; Default Value ; Entity Name     ; Section Id     ;
++-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 53447161591741.159074718206112                                    ; --            ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                 ; --            ; --              ; --             ;
+; MISC_FILE                           ; Computer_System/synthesis/../Computer_System.cmp                  ; --            ; --              ; --             ;
+; MISC_FILE                           ; Computer_System/synthesis/../../Computer_System.qsys              ; --            ; --              ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                               ; --            ; --              ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                            ; --            ; --              ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                            ; --            ; --              ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                            ; --            ; --              ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                               ; --            ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                             ; --            ; --              ; --             ;
+; SLD_FILE                            ; Computer_System/synthesis/Computer_System.regmap                  ; --            ; --              ; --             ;
+; SLD_FILE                            ; Computer_System/synthesis/Computer_System.debuginfo               ; --            ; --              ; --             ;
+; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1590746761 ; --            ; Computer_System ; --             ;
+; SMART_RECOMPILE                     ; On                                                                ; Off           ; --              ; --             ;
+; SOPCINFO_FILE                       ; Computer_System/synthesis/../../Computer_System.sopcinfo          ; --            ; --              ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                ; --            ; --              ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                               ; --            ; --              ; eda_blast_fpga ;
++-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:04:28     ; 1.0                     ; 5779 MB             ; 00:04:59                           ;
+; Fitter               ; 00:04:49     ; 1.1                     ; 6273 MB             ; 00:08:12                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4860 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:25     ; 1.5                     ; 5347 MB             ; 00:00:35                           ;
+; Total                ; 00:09:50     ; --                      ; --                  ; 00:13:53                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off DE2_115_Computer -c DE2_115_Computer
+quartus_fit --read_settings_files=off --write_settings_files=off DE2_115_Computer -c DE2_115_Computer
+quartus_asm --read_settings_files=off --write_settings_files=off DE2_115_Computer -c DE2_115_Computer
+quartus_sta DE2_115_Computer -c DE2_115_Computer
+
+
+
